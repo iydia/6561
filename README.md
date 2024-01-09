@@ -4,14 +4,11 @@ The classic 2048 game -- in powers of 3!
 
 ## Table of Contents
 
-- [Introduction](#introduction)
+- [How to play](#how-to-play)
 - [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 
-## Introduction
+## How to play
 
 
 ## Features

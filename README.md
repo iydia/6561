@@ -7,6 +7,7 @@ The classic 2048 game -- in powers of 3!
 - [How to play](#how-to-play)
 - [Features](#features)
 - [Link to the game](#link-to-the-game)
+- [References](#references)
 - [License](#license)
 
 ## How to play
@@ -24,6 +25,10 @@ The game keeps track of your best score in each session.
 ## Link to the game
 
 [Click to play 6561](https://iydia.github.io/6561/)
+
+## References
+
+[2048](https://play2048.co/) - The original game, by Gabriele Cirulli
 
 ## License
 

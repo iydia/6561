@@ -6,6 +6,7 @@ The classic 2048 game -- in powers of 3!
 
 - [How to play](#how-to-play)
 - [Features](#features)
+- [Link to the game](#link-to-the-game)
 - [License](#license)
 
 ## How to play
@@ -19,6 +20,10 @@ Play until you reach 6561! You lose if the grid becomes full and no more valid m
 ## Features
 
 The game keeps track of your best score in each session. 
+
+## Link to the game
+
+[Click to play 6561](https://iydia.github.io/6561/)
 
 ## License
 

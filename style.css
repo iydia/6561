@@ -18,6 +18,7 @@ html{
     color: #3B4B39;
     font-weight: bold;
     font-size: 4rem;
+    margin-bottom: 20px;
 }
 
 .score{
@@ -30,7 +31,7 @@ html{
     margin-top: 10px;
 }
 
-#score-title{
+.score-title{
     font-size: 1.2rem;
     display: flex;
     justify-content: center;
@@ -47,13 +48,17 @@ html{
     margin-top: 3px;
 }
 
+.message{
+    color: #3B4B39;
+}
+
 .grid{
     height: 25rem;
     width: 25rem;
     background: #BDCCB3;
     border: 0.25rem solid #9FB295;
     border-radius: 0.25rem;
-    margin-top: 25px;
+    margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
 }

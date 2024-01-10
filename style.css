@@ -76,3 +76,9 @@ html{
     font-size: 60px;
     line-height: 1.6;  
 }
+
+#hr{
+    margin-top: 30px;
+    background-color: #3B4B39;
+}
+

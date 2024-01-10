@@ -28,28 +28,28 @@ document.addEventListener('DOMContentLoaded', () =>  {
       generate();
     }
     init()
-    
+      
     function moveLeft() {
-        for (let i = 0; i < 16; i++) {
-          if (i % 4 === 0) {
-            let sum1 = tiles[i].innerHTML;
-            let sum2 = tiles[i+1].innerHTML;
-            let sum3 = tiles[i+2].innerHTML;
-            let sum4 = tiles[i+3].innerHTML;
-            let row = [sum1, sum2, sum3, sum4].map(num => +num);
-    
-            let filteredRow = row.filter(num => num);
-            let remaining = 4 - filteredRow.length;
-            let numTiles = Array(remaining).fill(0);
-            let newRow = filteredRow.concat(numTiles);
-    
-            for (let j = 0; j < 4; j++) {
-              tiles[i + j].innerHTML = newRow[j];
-            }
+      for (let i = 0; i < 16; i++) {
+        if (i % 4 === 0) {
+          let sum1 = tiles[i].innerHTML;
+          let sum2 = tiles[i+1].innerHTML;
+          let sum3 = tiles[i+2].innerHTML;
+          let sum4 = tiles[i+3].innerHTML;
+          let line = [sum1, sum2, sum3, sum4].map(num => +num);
+  
+          let filtered = line.filter(num => num);
+          let remaining = 4 - filtered.length;
+          let numTiles = Array(remaining).fill(0);
+          let newLine = filtered.concat(numTiles);
+  
+          for (let j = 0; j < 4; j++) {
+            tiles[i + j].innerHTML = newLine[j];
           }
         }
       }
-  
+    }
+
     function moveRight() {
       for (let i = 0; i < 16; i++) {
         if (i % 4 === 0) {
@@ -57,35 +57,35 @@ document.addEventListener('DOMContentLoaded', () =>  {
           let sum2 = tiles[i+1].innerHTML;
           let sum3 = tiles[i+2].innerHTML;
           let sum4 = tiles[i+3].innerHTML;
-          let row = [sum1, sum2, sum3, sum4].map(num => +num);
+          let line = [sum1, sum2, sum3, sum4].map(num => +num);
   
-          let filteredRow = row.filter(num => num);
-          let remaining = 4 - filteredRow.length;
+          let filtered = line.filter(num => num);
+          let remaining = 4 - filtered.length;
           let numTiles = Array(remaining).fill(0);
-          let newRow = numTiles.concat(filteredRow);
+          let newLine = numTiles.concat(filtered);
   
           for (let j = 0; j < 4; j++) {
-            tiles[i + j].innerHTML = newRow[j];
+            tiles[i + j].innerHTML = newLine[j];
           }
         }
       }
     }  
-  
+    
     function moveUp() {
       for (let i = 0; i < 4; i++) {
         let sum1 = tiles[i].innerHTML;
         let sum2 = tiles[i+width].innerHTML;
         let sum3 = tiles[i+(width*2)].innerHTML;
         let sum4 = tiles[i+(width*3)].innerHTML;
-        let column = [sum1, sum2, sum3, sum4].map(num => +num);
+        let line = [sum1, sum2, sum3, sum4].map(num => +num);
   
-        let filteredColumn = column.filter(num => num);
-        let remaining = 4 - filteredColumn.length;
+        let filtered = line.filter(num => num);
+        let remaining = 4 - filtered.length;
         let numTiles = Array(remaining).fill(0);
-        let newColumn = filteredColumn.concat(numTiles);
+        let newLine = filtered.concat(numTiles);
   
         for (let j = 0; j < 4; j++) {
-          tiles[i + j * width].innerHTML = newColumn[j];
+          tiles[i + j * width].innerHTML = newLine[j];
         }
       }
     }
@@ -96,15 +96,15 @@ document.addEventListener('DOMContentLoaded', () =>  {
         let sum2 = tiles[i+width].innerHTML;
         let sum3 = tiles[i+(width*2)].innerHTML;
         let sum4 = tiles[i+(width*3)].innerHTML;
-        let column = [sum1, sum2, sum3, sum4].map(num => +num);
+        let line = [sum1, sum2, sum3, sum4].map(num => +num);
   
-        let filteredColumn = column.filter(num => num);
-        let remaining = 4 - filteredColumn.length;
+        let filtered = line.filter(num => num);
+        let remaining = 4 - filtered.length;
         let numTiles = Array(remaining).fill(0);
-        let newColumn = numTiles.concat(filteredColumn);
+        let newLine = numTiles.concat(filtered);
   
         for (let j = 0; j < 4; j++) {
-          tiles[i + j * width].innerHTML = newColumn[j];
+          tiles[i + j * width].innerHTML = newLine[j];
         }
       }
     }

@@ -192,18 +192,10 @@ document.addEventListener('DOMContentLoaded', () =>  {
   
     /* Fix: If all directions cause no change then it's fail */
     function isLose() {
-      let numTiles = 0;
-      for (let i=0; i < tiles.length; i++) {
-        if (tiles[i].innerHTML == 0) {
-            numTiles++;
-        }
-      }
-      if (numTiles === 0) {
         /* Add turn red? 
         message.innerHTML = 'GAME OVER';
         document.removeEventListener('keyup', control);
         setTimeout(() => clear(), 3000); */
-      }
     }
   
     function clear() {
@@ -216,8 +208,8 @@ document.addEventListener('DOMContentLoaded', () =>  {
         else if (tiles[i].innerHTML == 3) tiles[i].style.backgroundColor = '#ECEEDA';
         else if (tiles[i].innerHTML == 9) tiles[i].style.backgroundColor = '#E0EDC8';
         else if (tiles[i].innerHTML == 27) tiles[i].style.backgroundColor = '#CFF293';
-        else if (tiles[i].innerHTML == 81) tiles[i].style.backgroundColor = '#065D09';
-        else if (tiles[i].innerHTML == 243) tiles[i].style.backgroundColor = '#9CD539';
+        else if (tiles[i].innerHTML == 81) tiles[i].style.backgroundColor = '#9CD539';
+        else if (tiles[i].innerHTML == 243) tiles[i].style.backgroundColor = '#0CB010';
         else if (tiles[i].innerHTML == 729) tiles[i].style.backgroundColor = '#25A072';
         else if (tiles[i].innerHTML == 2187) tiles[i].style.backgroundColor = '#0CB5A5';
         else if (tiles[i].innerHTML == 6561) tiles[i].style.backgroundColor = '#056856';

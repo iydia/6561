@@ -3,24 +3,43 @@ body{
     font-family: "Clear Sans", "Helvetica Neue"
 }
 
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    height: 9rem;
+    width: 25rem;
+}
+
 #title{
     font-weight: bold;
     font-size: 4rem;
     color: #3B4B39;
 }
 
-.container{
+#score{
     display: flex;
-    flex-direction: column;
+    height: 2rem;
+    width: 5rem;
+    color: #3B4B39;
+    background-color: #BDCCB3;
+    border-radius: 0.25rem;
     justify-content: center;
     align-items: center;
+    float: right;
 }
 
 .grid{
+    display: flex;
+    flex-wrap: wrap;
     height: 25rem;
     width: 25rem;
-    background: #A6B1A0;
-    border: 0.25rem solid #909890;
+    background: #BDCCB3;
+    border: 0.25rem solid #9FB295;
     border-radius: 0.25rem;
     margin-top: 25px;
 }

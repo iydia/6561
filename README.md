@@ -20,7 +20,7 @@ Play until you reach 6561! You lose if the grid becomes full and no more valid m
 
 ## Features
 
-The game keeps track of your best score in each session. 
+Coming soon - The game keeps track of your best score in each session. 
 
 ## Link to the game
 

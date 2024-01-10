@@ -1,3 +1,26 @@
-html{
+body{
     background: #F2F9F2;
+    font-family: "Clear Sans", "Helvetica Neue"
+}
+
+#title{
+    font-weight: bold;
+    font-size: 4rem;
+    color: #3B4B39;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid{
+    height: 25rem;
+    width: 25rem;
+    background: #A6B1A0;
+    border: 0.25rem solid #909890;
+    border-radius: 0.25rem;
+    margin-top: 25px;
 }

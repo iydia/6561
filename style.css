@@ -1,45 +1,71 @@
-body{
+html{
     background: #F2F9F2;
-    font-family: "Clear Sans", "Helvetica Neue"
+    font-family: "Clear Sans", "Helvetica Neue";
+    display: flex;
+    justify-content: center;
 }
 
 .container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    margin-top: 20px;
 }
 
 .header{
-    height: 9rem;
-    width: 25rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 #title{
+    color: #3B4B39;
     font-weight: bold;
     font-size: 4rem;
-    color: #3B4B39;
 }
 
-#score{
-    display: flex;
-    height: 2rem;
+.score{
+    height: 4rem;
     width: 5rem;
     color: #3B4B39;
+    text-align: center;
     background-color: #BDCCB3;
     border-radius: 0.25rem;
+    margin-top: 10px;
+}
+
+#score-title{
+    font-size: 1.2rem;
+    display: flex;
     justify-content: center;
     align-items: center;
-    float: right;
+    margin-top: 5px;
+}
+
+#score-num{
+    color: black;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3px;
 }
 
 .grid{
-    display: flex;
-    flex-wrap: wrap;
     height: 25rem;
     width: 25rem;
     background: #BDCCB3;
     border: 0.25rem solid #9FB295;
     border-radius: 0.25rem;
     margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid div{
+    width: 100px;
+    height: 100px;
+    margin: 7px;
+    border-radius: 3px;
+    color: #afa192;
+    font-weight: bold;
+    text-align: center;
+    font-size: 60px;
+    line-height: 1.6;  
 }

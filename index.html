@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>src="./script.js"</script>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <script>src="game.js"</script>
     <title>6561</title>
 </head>
 <body>
@@ -14,7 +14,10 @@
         <!-- Title and Score -->
         <div class="header">
             <span id="title">6561</span>
-            <span id="score">Score: 0</span>
+            <div class="score">
+                <div id="score-title">Score:</div>
+                <span id="score-num">0</span>
+            </div>
         </div>
 
         <!-- Game board -->

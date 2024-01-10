@@ -28,7 +28,7 @@ The game keeps track of your best score in each session.
 
 ## References
 
-[2048](https://play2048.co/) - The original game, by Gabriele Cirulli
+[2048](https://play2048.co/) - The original game, by [Gabriele Cirulli](https://github.com/gabrielecirulli)
 
 ## License
 

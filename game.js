@@ -211,33 +211,33 @@ document.addEventListener('DOMContentLoaded', () =>  {
           }
           else if (tiles[i].innerHTML == 3) {
             tiles[i].style.backgroundColor = '#ECEEDA';
-            tiles[i].style.color = '';
+            tiles[i].style.color = '#546B51';
             tiles[i].style.fontSize = '';
           }
           else if (tiles[i].innerHTML == 9) {
             tiles[i].style.backgroundColor = '#E0EDC8';
-            tiles[i].style.color = '';
+            tiles[i].style.color = '#546B51';
             tiles[i].style.fontSize = '';
           }
           else if (tiles[i].innerHTML == 27) {
             tiles[i].style.backgroundColor = '#CFF293';
-            tiles[i].style.color = '';
+            tiles[i].style.color = '#546B51';
             tiles[i].style.fontSize = '';
           }
           else if (tiles[i].innerHTML == 81) {
             tiles[i].style.backgroundColor = '#9CD539';
-            tiles[i].style.color = '';
+            tiles[i].style.color = '#546B51';
             tiles[i].style.fontSize = '';
           }
           else if (tiles[i].innerHTML == 243) {
             tiles[i].style.backgroundColor = '#0CB010';
-            tiles[i].style.color = '';
-            tiles[i].style.fontSize = '';
+            tiles[i].style.color = '#546B51';
+            tiles[i].style.fontSize = '0.8rem';
           }
           else if (tiles[i].innerHTML == 729) {
             tiles[i].style.backgroundColor = '#25A072';
-            tiles[i].style.color = '';
-            tiles[i].style.fontSize = '';
+            tiles[i].style.color = '#546B51';
+            tiles[i].style.fontSize = '0.8rem';
           }
           else if (tiles[i].innerHTML == 2187) {
             tiles[i].style.backgroundColor = '#0CB5A5';

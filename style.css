@@ -53,14 +53,16 @@ html{
 }
 
 .grid{
-    height: 25rem;
-    width: 25rem;
-    background: #BDCCB3;
-    border: 0.25rem solid #9FB295;
+    height: 30rem;
+    width: 29rem;
+    background: #9FB295;
+    border: 0.3rem solid #9FB295;
     border-radius: 0.25rem;
-    margin-top: 15px;
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid div{

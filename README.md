@@ -14,7 +14,7 @@ The classic 2048 game -- in powers of 3!
 
 Use arrow keys (left, right, up, down) to slide all blocks on the 4x4 grid in the specified direction. 
 
-If identical blocks slide into each other, they will multiply. With each click, a new block is randomly generated in an empty location on the grid. 
+If two blocks with identical numbers slide into each other, they combine and get tripled. With each click, a new block is randomly generated in an empty location on the grid. 
 
 Play until you reach 6561! You lose if the grid becomes full and no more valid moves can be made. 
 

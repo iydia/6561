@@ -5,9 +5,18 @@ document.addEventListener('DOMContentLoaded', () =>  {
     const width = 4;
     let tiles = [];
     let count = 0;
-
-    /* Remove let in for loop? */
   
+    function generate() {
+        rand = Math.floor(Math.random() * tiles.length);
+        if (tiles[rand].innerHTML == 0) {
+          // Generate 3 or 9 instead of 2
+          tiles[rand].innerHTML = Math.random() < 0.5 ? 3 : 9;
+          isLose();
+        } else {
+          generate();
+        }
+      }
+      
     function init() {
       for (let i = 0; i < width*width; i++) {
         tile = document.createElement('div');
@@ -19,16 +28,7 @@ document.addEventListener('DOMContentLoaded', () =>  {
       generate();
     }
     init()
-  
-    function generate() {
-      rand = Math.floor(Math.random() * tiles.length);
-      if (tiles[rand].innerHTML == 0) {
-        tiles[rand].innerHTML = 3;
-        checkForGameOver();
-      } else 
-      generate();
-    }
-  
+    
     function moveLeft() {
         for (let i = 0; i < 16; i++) {
           if (i % 4 === 0) {
@@ -114,31 +114,44 @@ document.addEventListener('DOMContentLoaded', () =>  {
     }
   
     function collapseRow() {
-      for (let i = 0; i < 15; i++) {
-        if (tiles[i].innerHTML === tiles[i +1].innerHTML) {
-          let combinedTotal = parseInt(tiles[i].innerHTML) + parseInt(tiles[i +1].innerHTML);
-          tiles[i].innerHTML = combinedTotal;
-          tiles[i+1].innerHTML = 0;
-          count += combinedTotal;
-          score.innerHTML = count;
+        for (let i = 0; i < 15; i++) {
+          if (tiles[i].innerHTML === tiles[i + 1].innerHTML) {
+            // Multiply combined total by 3
+            let combinedTotal = 3 * parseInt(tiles[i].innerHTML);
+            tiles[i].innerHTML = combinedTotal;
+            tiles[i + 1].innerHTML = 0;
+            count += combinedTotal;
+            score.innerHTML = count;
+          }
+        }
+        isWin();
+      }
+    
+      function collapseColumn() {
+        for (let i = 0; i < 12; i++) {
+          if (tiles[i].innerHTML === tiles[i + width].innerHTML) {
+            // Multiply combined total by 3
+            let combinedTotal = 3 * parseInt(tiles[i].innerHTML);
+            tiles[i].innerHTML = combinedTotal;
+            tiles[i + width].innerHTML = 0;
+            count += combinedTotal;
+            score.innerHTML = count;
+          }
+        }
+        isWin();
+      }
+    
+      function isWin() {
+        for (let i = 0; i < tiles.length; i++) {
+          // Check for the number 6561
+          if (tiles[i].innerHTML == 6561) {
+            message.innerHTML = 'You got 6561!';
+            document.removeEventListener('keyup', control);
+            setTimeout(() => clear(), 3000);
+          }
         }
       }
-      checkForWin()
-    }
-  
-    function collapseColumn() {
-      for (let i = 0; i < 12; i++) {
-        if (tiles[i].innerHTML === tiles[i +width].innerHTML) {
-          let combinedTotal = parseInt(tiles[i].innerHTML) + parseInt(tiles[i +width].innerHTML);
-          tiles[i].innerHTML = combinedTotal;
-          tiles[i+width].innerHTML = 0;
-          count += combinedTotal;
-          score.innerHTML = count;
-        }
-      }
-      checkForWin()
-    }
-  
+      
     function control(input) {
       if(input.keyCode === 37) {
         keyLeft();
@@ -157,40 +170,30 @@ document.addEventListener('DOMContentLoaded', () =>  {
         collapseRow();
         moveLeft();
         generate();
-      }
+    }
   
     function keyRight() {
-      moveRight();
-      collapseRow();
-      moveRight();
-      generate();
+        moveRight();
+        collapseRow();
+        moveRight();
+        generate();
     }
   
     function keyUp() {
-      moveUp();
-      collapseColumn();
-      moveUp();
-      generate();
+        moveUp();
+        collapseColumn();
+        moveUp();
+        generate();
     }
   
     function keyDown() {
-      moveDown();
-      collapseColumn();
-      moveDown();
-      generate();
+        moveDown();
+        collapseColumn();
+        moveDown();
+        generate();
     }
   
-    function checkForWin() {
-      for (let i = 0; i < tiles.length; i++) {
-        if (tiles[i].innerHTML == 2048) {
-          message.innerHTML = 'You got 6561!';
-          document.removeEventListener('keyup', control);
-          setTimeout(() => clear(), 3000);
-        }
-      }
-    }
-  
-    function checkForGameOver() {
+    function isLose() {
       let numTiles = 0;
       for (let i=0; i < tiles.length; i++) {
         if (tiles[i].innerHTML == 0) {

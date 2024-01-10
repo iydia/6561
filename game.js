@@ -116,7 +116,6 @@ document.addEventListener('DOMContentLoaded', () =>  {
     function collapseRow() {
         for (let i = 0; i < 15; i++) {
           if (tiles[i].innerHTML === tiles[i + 1].innerHTML) {
-            // Multiply combined total by 3
             let combinedTotal = 3 * parseInt(tiles[i].innerHTML);
             tiles[i].innerHTML = combinedTotal;
             tiles[i + 1].innerHTML = 0;
@@ -130,7 +129,6 @@ document.addEventListener('DOMContentLoaded', () =>  {
       function collapseColumn() {
         for (let i = 0; i < 12; i++) {
           if (tiles[i].innerHTML === tiles[i + width].innerHTML) {
-            // Multiply combined total by 3
             let combinedTotal = 3 * parseInt(tiles[i].innerHTML);
             tiles[i].innerHTML = combinedTotal;
             tiles[i + width].innerHTML = 0;
@@ -143,7 +141,6 @@ document.addEventListener('DOMContentLoaded', () =>  {
     
       function isWin() {
         for (let i = 0; i < tiles.length; i++) {
-          // Check for the number 6561
           if (tiles[i].innerHTML == 6561) {
             message.innerHTML = 'You got 6561!';
             document.removeEventListener('keyup', control);
@@ -193,6 +190,7 @@ document.addEventListener('DOMContentLoaded', () =>  {
         generate();
     }
   
+    /* Fix to accomodate to can-make-a-move scenarios */
     function isLose() {
       let numTiles = 0;
       for (let i=0; i < tiles.length; i++) {
@@ -202,9 +200,9 @@ document.addEventListener('DOMContentLoaded', () =>  {
       }
       if (numTiles === 0) {
         message.innerHTML = 'GAME OVER';
-        /* Add turn red? */
+        /* Add turn red? 
         document.removeEventListener('keyup', control);
-        setTimeout(() => clear(), 3000);
+        setTimeout(() => clear(), 3000); */
       }
     }
   
@@ -218,11 +216,11 @@ document.addEventListener('DOMContentLoaded', () =>  {
         else if (tiles[i].innerHTML == 3) tiles[i].style.backgroundColor = '#ECEEDA';
         else if (tiles[i].innerHTML == 9) tiles[i].style.backgroundColor = '#E0EDC8';
         else if (tiles[i].innerHTML == 27) tiles[i].style.backgroundColor = '#CFF293';
-        else if (tiles[i].innerHTML == 81) tiles[i].style.backgroundColor = '#80ED65';
-        else if (tiles[i].innerHTML == 243) tiles[i].style.backgroundColor = '#3CC34F';
+        else if (tiles[i].innerHTML == 81) tiles[i].style.backgroundColor = '#065D09';
+        else if (tiles[i].innerHTML == 243) tiles[i].style.backgroundColor = '#9CD539';
         else if (tiles[i].innerHTML == 729) tiles[i].style.backgroundColor = '#25A072';
-        else if (tiles[i].innerHTML == 2187) tiles[i].style.backgroundColor = '#0D6857';
-        else if (tiles[i].innerHTML == 6561) tiles[i].style.backgroundColor = '#084F42';
+        else if (tiles[i].innerHTML == 2187) tiles[i].style.backgroundColor = '#21A78E';
+        else if (tiles[i].innerHTML == 6561) tiles[i].style.backgroundColor = '#056856';
         else if (tiles[i].innerHTML == 19683) tiles[i].style.backgroundColor = '#032D25';
       }
   }

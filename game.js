@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () =>  {
         generate();
     }
   
-    /* Fix to accomodate to can-make-a-move scenarios */
+    /* Fix: If all directions cause no change then it's fail */
     function isLose() {
       let numTiles = 0;
       for (let i=0; i < tiles.length; i++) {
@@ -199,8 +199,8 @@ document.addEventListener('DOMContentLoaded', () =>  {
         }
       }
       if (numTiles === 0) {
-        message.innerHTML = 'GAME OVER';
         /* Add turn red? 
+        message.innerHTML = 'GAME OVER';
         document.removeEventListener('keyup', control);
         setTimeout(() => clear(), 3000); */
       }
@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () =>  {
         else if (tiles[i].innerHTML == 81) tiles[i].style.backgroundColor = '#065D09';
         else if (tiles[i].innerHTML == 243) tiles[i].style.backgroundColor = '#9CD539';
         else if (tiles[i].innerHTML == 729) tiles[i].style.backgroundColor = '#25A072';
-        else if (tiles[i].innerHTML == 2187) tiles[i].style.backgroundColor = '#21A78E';
+        else if (tiles[i].innerHTML == 2187) tiles[i].style.backgroundColor = '#0CB5A5';
         else if (tiles[i].innerHTML == 6561) tiles[i].style.backgroundColor = '#056856';
         else if (tiles[i].innerHTML == 19683) tiles[i].style.backgroundColor = '#032D25';
       }

@@ -204,55 +204,50 @@ document.addEventListener('DOMContentLoaded', () =>  {
   
     function giveHex() {
         for (let i = 0; i < tiles.length; i++) {
+            tiles[i].style.textAlign = 'center';
+            tiles[i].style.display = 'flex';
+            tiles[i].style.alignItems = 'center';
+            tiles[i].style.justifyContent = 'center';
+            tiles[i].style.fontSize = '';
           if (tiles[i].innerHTML == 0) {
             tiles[i].style.backgroundColor = '#BDCCB3';
             tiles[i].style.color = '#BDCCB3';
-            tiles[i].style.fontSize = '';
           }
           else if (tiles[i].innerHTML == 3) {
             tiles[i].style.backgroundColor = '#ECEEDA';
             tiles[i].style.color = '#546B51';
-            tiles[i].style.fontSize = '';
           }
           else if (tiles[i].innerHTML == 9) {
             tiles[i].style.backgroundColor = '#E0EDC8';
             tiles[i].style.color = '#546B51';
-            tiles[i].style.fontSize = '';
           }
           else if (tiles[i].innerHTML == 27) {
             tiles[i].style.backgroundColor = '#CFF293';
             tiles[i].style.color = '#546B51';
-            tiles[i].style.fontSize = '';
           }
           else if (tiles[i].innerHTML == 81) {
             tiles[i].style.backgroundColor = '#9CD539';
             tiles[i].style.color = '#546B51';
-            tiles[i].style.fontSize = '';
           }
           else if (tiles[i].innerHTML == 243) {
             tiles[i].style.backgroundColor = '#0CB010';
-            tiles[i].style.color = '#546B51';
-            tiles[i].style.fontSize = '0.8rem';
+            tiles[i].style.color = '#ECEEDA';
+            tiles[i].style.fontSize = '3rem';
           }
           else if (tiles[i].innerHTML == 729) {
             tiles[i].style.backgroundColor = '#25A072';
-            tiles[i].style.color = '#546B51';
-            tiles[i].style.fontSize = '0.8rem';
+            tiles[i].style.color = '#ECEEDA';
+            tiles[i].style.fontSize = '3rem';
           }
           else if (tiles[i].innerHTML == 2187) {
             tiles[i].style.backgroundColor = '#0CB5A5';
-            tiles[i].style.color = '#F2F9F2';
-            tiles[i].style.fontSize = '0.5rem';
+            tiles[i].style.color = '#ECEEDA';
+            tiles[i].style.fontSize = '2rem';
           }
           else if (tiles[i].innerHTML == 6561) {
             tiles[i].style.backgroundColor = '#056856';
-            tiles[i].style.color = '#F2F9F2';
-            tiles[i].style.fontSize = '0.5rem';
-          }
-          else if (tiles[i].innerHTML == 19683) {
-            tiles[i].style.backgroundColor = '#032D25';
-            tiles[i].style.color = '';
-            tiles[i].style.fontSize = '';
+            tiles[i].style.color = '#ECEEDA';
+            tiles[i].style.fontSize = '2rem';
           }
         }
       }

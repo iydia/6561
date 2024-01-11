@@ -85,39 +85,91 @@ html{
 }
 
 @media (max-width: 600px) {
-    .grid {
-        height: 80vw;
-        width: 80vw;
+    html{
+        background: #F2F9F2;
+        font-family: "Clear Sans", "Helvetica Neue";
+        display: flex;
+        justify-content: center;
     }
-
-    .grid div {
-        width: 20%;
-        height: 20%;
-        font-size: 4vw;
+    
+    .container{
+        margin-top: 20px;
+        max-width: 29rem;
+        width: 100%;
     }
-
-    #title {
+    
+    .header{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #title{
+        color: #3B4B39;
+        font-weight: bold;
         font-size: 3rem;
+        margin-bottom: 20px;
     }
-
-    .score {
+    
+    .score{
         height: 3rem;
         width: 4rem;
+        color: #3B4B39;
+        text-align: center;
+        background-color: #BDCCB3;
+        border-radius: 0.25rem;
+        margin-top: 10px;
+    }
+    
+    .score-title{
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+    }
+    
+    #score-num{
+        color: black;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3px;
+    }
+        
+    .grid{
+        height: 80vw;
+        width: 80vw;
+        background: #9FB295;
+        border: 0.3rem solid #9FB295;
+        border-radius: 0.25rem;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .grid div{
+        width: 20%;
+        height: 20%;
+        margin: 7px;
+        border-radius: 3px;
+        color: #afa192;
+        font-weight: bold;
+        text-align: center;
+        font-size: 4vw;
+        line-height: 1.6;  
+    }
+    
+    .hr{
+        margin-top: 20px;
+        background-color: #3B4B39;
     }
 
-    .score-title {
-        font-size: 1rem;
-    }
-
-    #score-num {
-        font-size: 1rem;
-    }
-
-    #message {
-        font-size: 1rem;
-    }
-
-    .footer {
-        font-size: 1rem;
+    .footer{
+        height: 80vw;
+        width: 80vw;
+        font-size: 0.8rem;
     }
 }

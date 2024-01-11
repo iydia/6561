@@ -121,11 +121,10 @@ html{
     }
     
     .score-title{
-        font-size: 1rem;
+        font-size: 0.9rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 5px;
     }
     
     #score-num{
@@ -134,7 +133,6 @@ html{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 3px;
     }
         
     .grid{

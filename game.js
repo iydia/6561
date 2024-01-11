@@ -183,14 +183,18 @@ document.addEventListener('DOMContentLoaded', () =>  {
       if (absDx > absDy) {
         if (dx > 0) {
           moveRight();
+          collapse(15, 1);
         } else {
           moveLeft();
+          collapse(15, 1);
         }
       } else {
         if (dy > 0) {
           moveDown();
+          collapse(12, width);
         } else {
           moveUp();
+          collapse(12, width);
         }
       }
     }

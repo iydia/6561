@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () =>  {
   let tiles = [];
   let count = 0;
 
+  let startX, startY, endX, endY;
+
   function generate() {
       rand = Math.floor(Math.random() * tiles.length);
       if (tiles[rand].innerHTML == 0) {
@@ -170,6 +172,44 @@ document.addEventListener('DOMContentLoaded', () =>  {
       moveDown();
       generate();
   }
+
+  function touch() {
+    let dx = endX - startX;
+    let dy = endY - startY;
+    let absDx = Math.abs(dx);
+    let absDy = Math.abs(dy);
+
+    if (Math.max(absDx, absDy) > 10) {
+      if (absDx > absDy) {
+        if (dx > 0) {
+          moveRight();
+        } else {
+          moveLeft();
+        }
+      } else {
+        if (dy > 0) {
+          moveDown();
+        } else {
+          moveUp();
+        }
+      }
+    }
+  }
+
+  function touchStart(event) {
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+  }
+
+  function touchEnd(event) {
+    endX = event.changedTouches[0].clientX;
+    endY = event.changedTouches[0].clientY;
+    touch();
+  }
+
+  document.addEventListener('keyup', control);
+  document.addEventListener('touchstart', touchStart);
+  document.addEventListener('touchend', touchEnd);
 
   function clear() {
     clearInterval(myTimer);

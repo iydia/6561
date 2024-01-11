@@ -271,10 +271,12 @@ document.addEventListener('DOMContentLoaded', () =>  {
       else if (tiles[i].innerHTML == 243) {
         tiles[i].style.backgroundColor = '#0CB010';
         tiles[i].style.color = '#ECEEDA';
+        tiles[i].style.fontSize = '2rem';
       }
       else if (tiles[i].innerHTML == 729) {
         tiles[i].style.backgroundColor = '#25A072';
         tiles[i].style.color = '#ECEEDA';
+        tiles[i].style.fontSize = '2rem';
       }
       else if (tiles[i].innerHTML == 2187) {
         tiles[i].style.backgroundColor = '#0CB5A5';

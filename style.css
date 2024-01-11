@@ -176,5 +176,16 @@ html{
             height: 88vw;
             width: 88vw;
         }
-    }    
+    }
+
+    @media (max-width: 400px) {
+        .grid{
+            height: 76vw;
+            width: 76vw;
+        }
+        .grid div{
+            width: 19%;
+            height: 19%;
+        }
+    }
 }

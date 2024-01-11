@@ -7,6 +7,8 @@ html{
 
 .container{
     margin-top: 20px;
+    max-width: 29rem;
+    width: 100%;
 }
 
 .header{
@@ -82,3 +84,40 @@ html{
     background-color: #3B4B39;
 }
 
+@media (max-width: 600px) {
+    .grid {
+        height: 80vw;
+        width: 80vw;
+    }
+
+    .grid div {
+        width: 20%;
+        height: 20%;
+        font-size: 4vw;
+    }
+
+    #title {
+        font-size: 3rem;
+    }
+
+    .score {
+        height: 3rem;
+        width: 4rem;
+    }
+
+    .score-title {
+        font-size: 1rem;
+    }
+
+    #score-num {
+        font-size: 1rem;
+    }
+
+    #message {
+        font-size: 1rem;
+    }
+
+    .footer {
+        font-size: 1rem;
+    }
+}

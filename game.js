@@ -133,6 +133,8 @@ document.addEventListener('DOMContentLoaded', () =>  {
   }
     
   function control(input) {
+    input.preventDefault();
+
     if(input.keyCode === 37) {
       keyLeft();
     } else if (input.keyCode === 38) {
@@ -221,6 +223,7 @@ document.addEventListener('DOMContentLoaded', () =>  {
   }
 
   document.addEventListener('keyup', control);
+  document.addEventListener('keydown', control);
   document.addEventListener('touchstart', touchStart);
   document.addEventListener('touchend', touchEnd);
 
@@ -268,12 +271,10 @@ document.addEventListener('DOMContentLoaded', () =>  {
       else if (tiles[i].innerHTML == 243) {
         tiles[i].style.backgroundColor = '#0CB010';
         tiles[i].style.color = '#ECEEDA';
-        tiles[i].style.fontSize = '2.9rem';
       }
       else if (tiles[i].innerHTML == 729) {
         tiles[i].style.backgroundColor = '#25A072';
         tiles[i].style.color = '#ECEEDA';
-        tiles[i].style.fontSize = '2.9rem';
       }
       else if (tiles[i].innerHTML == 2187) {
         tiles[i].style.backgroundColor = '#0CB5A5';

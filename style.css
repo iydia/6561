@@ -84,7 +84,7 @@ html{
     background-color: #3B4B39;
 }
 
-@media ((max-width: 600px)) {
+@media (max-width: 600px) {
     html{
         background: #F2F9F2;
         font-family: "Clear Sans", "Helvetica Neue";
@@ -170,4 +170,11 @@ html{
         width: 80vw;
         font-size: 0.8rem;
     }
+
+    @media (max-width: 450px) {
+        .grid{
+            height: 88vw;
+            width: 88vw;
+        }
+    }    
 }

@@ -224,19 +224,19 @@ document.addEventListener('DOMContentLoaded', () =>  {
   document.addEventListener('touchstart', touchStart);
   document.addEventListener('touchend', touchEnd);
 
-  document.addEventListener('touchstart', (event) => {
+  grid.addEventListener('touchstart', (event) => {
     event.preventDefault();
     startX = event.touches[0].clientX;
     startY = event.touches[0].clientY;
   });
   
-  document.addEventListener('touchend', (event) => {
+  grid.addEventListener('touchend', (event) => {
     event.preventDefault();
     endX = event.changedTouches[0].clientX;
     endY = event.changedTouches[0].clientY;
     handleSwipe();
-  });  
-
+  });
+  
   function clear() {
     clearInterval(myTimer);
   }

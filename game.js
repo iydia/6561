@@ -225,11 +225,13 @@ document.addEventListener('DOMContentLoaded', () =>  {
   document.addEventListener('touchend', touchEnd);
 
   document.addEventListener('touchstart', (event) => {
+    event.preventDefault();
     startX = event.touches[0].clientX;
     startY = event.touches[0].clientY;
   });
   
   document.addEventListener('touchend', (event) => {
+    event.preventDefault();
     endX = event.changedTouches[0].clientX;
     endY = event.changedTouches[0].clientY;
     handleSwipe();

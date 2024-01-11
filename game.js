@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () =>  {
       generate();
   }
 
-  function touch() {
+  function handleSwipe() {
     let dx = endX - startX;
     let dy = endY - startY;
     let absDx = Math.abs(dx);
@@ -217,12 +217,23 @@ document.addEventListener('DOMContentLoaded', () =>  {
   function touchEnd(event) {
     endX = event.changedTouches[0].clientX;
     endY = event.changedTouches[0].clientY;
-    touch();
+    handleSwipe();
   }
 
   document.addEventListener('keyup', control);
   document.addEventListener('touchstart', touchStart);
   document.addEventListener('touchend', touchEnd);
+
+  document.addEventListener('touchstart', (event) => {
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+  });
+  
+  document.addEventListener('touchend', (event) => {
+    endX = event.changedTouches[0].clientX;
+    endY = event.changedTouches[0].clientY;
+    handleSwipe();
+  });  
 
   function clear() {
     clearInterval(myTimer);

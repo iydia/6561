@@ -184,17 +184,26 @@ document.addEventListener('DOMContentLoaded', () =>  {
         if (dx > 0) {
           moveRight();
           collapse(15, 1);
+          moveRight();
+          generate();
         } else {
           moveLeft();
           collapse(15, 1);
+          moveLeft();
+          generate();
         }
       } else {
         if (dy > 0) {
           moveDown();
           collapse(12, width);
+          moveDown();
+          generate();
+
         } else {
           moveUp();
           collapse(12, width);
+          moveUp();
+          generate();
         }
       }
     }

@@ -135,17 +135,18 @@ document.addEventListener('DOMContentLoaded', () =>  {
   function control(input) {
     input.preventDefault();
 
-    if(input.keyCode === 37) {
-      keyLeft();
-    } else if (input.keyCode === 38) {
-      keyUp();
-    } else if (input.keyCode === 39) {
-      keyRight();
-    } else if (input.keyCode === 40) {
-      keyDown();
+    if (input.key === 'ArrowLeft') {
+        keyLeft();
+    } else if (input.key === 'ArrowUp') {
+        keyUp();
+    } else if (input.key === 'ArrowRight') {
+        keyRight();
+    } else if (input.key === 'ArrowDown') {
+        keyDown();
     }
   }
-  document.addEventListener('keyup', control)
+  document.addEventListener('keyup', control);
+  document.addEventListener('keydown', control);
 
   function keyLeft() {
       moveLeft();
@@ -222,8 +223,6 @@ document.addEventListener('DOMContentLoaded', () =>  {
     handleSwipe();
   }
 
-  document.addEventListener('keyup', control);
-  document.addEventListener('keydown', control);
   document.addEventListener('touchstart', touchStart);
   document.addEventListener('touchend', touchEnd);
 

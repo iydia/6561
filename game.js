@@ -146,6 +146,14 @@ document.addEventListener('DOMContentLoaded', () =>  {
       }
     }
     document.addEventListener('keyup', control)
+
+    function preventScroll(event) {
+      if ([37, 38, 39, 40].includes(event.keyCode)) {
+          event.preventDefault();
+      }
+    }
+
+    document.addEventListener('keydown', preventScroll);
   
     function keyLeft() {
         moveLeft();
